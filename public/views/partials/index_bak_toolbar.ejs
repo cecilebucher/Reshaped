@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+    <% include ./partials/head %>
+    <body>
+        <div class="main-container">
+        
+                <% include ./partials/navbar %>
+                <% include ./partials/menu %>
+
+
+              <!--  <div id="tooldiv">
+                    
+                     <!--   <div id="tooldivheader"></div>-->
+                    <!--    <p>Move</p>
+                        <p>this</p>
+                        <p>DIV</p>-->
+                       <!-- <div id="tooldivfooter"></div>-->
+               <!-- </div>-->
+        
+                <hr><br><br>
+                <div class="workspace">
+                    
+                    <div id="tooldiv">
+                        <div id="tooldivheader"></div>
+
+                        <!--
+                        <div class="tools" name="text" value="off"><img class='icon' src="imgs/icons/text.svg">
+                            <div class='popup-tool' id='text-popup'>
+                                <img class="arrow" src="imgs/icons/arrow_green_popup.svg">
+                                <a href="#">Serif fonts</a>
+                                <a href="#">Sans-Serif fonts</a>
+                            </div>
+                        </div>
+                        <div class="tools" name="line" value="off"><img class='icon' src="imgs/icons/line.svg">
+                            <div class='popup-tool' id='line-popup'>
+                                <img class="arrow" src="imgs/icons/arrow_green_popup.svg">
+                                <input type="text" value="12" class="lineheight"></input>
+                                <h2 class="selected">PT</h2><h2>PX</h2><h2>EM</h2>
+                            </div>
+                        </div>
+                        <div class="tools" name="insertHTML" value="off"><img class='icon' src="imgs/icons/link.svg">
+                            <div class='popup-tool' id='link-popup'>
+                                <img class="arrow" src="imgs/icons/arrow_green_popup.svg">
+                                <label>Add URL:</label>
+                                <input type='text' class='text-field' value='http://...'>
+                                <input type='submit' value='OK' class='btn-field'>
+                            </div>
+                        </div>
+                        <div class="tools" name="color" value="off"><img class='icon' src="imgs/icons/color.svg">
+                            <div class='popup-tool' id='color-popup'>
+                                <img class="arrow" src="imgs/icons/arrow_green_popup.svg">
+                                <label>#FF0014</label>
+                                <div class="selectedcolor" style="background-color: blue"></div>
+                                <div class="colors">
+                                    <div class="color" style="background-color: blue"></div>
+                                    <div class="color" style="background-color: pink"></div>
+                                    <div class="color" style="background-color: red"></div>
+                                    <div class="color" style="background-color: blue"></div>
+                                    <div class="color" style="background-color: pink"></div>
+                                    <div class="color" style="background-color: red"></div>
+                                    <div class="color" style="background-color: blue"></div>
+                                    <div class="color" style="background-color: pink"></div>
+                                    <div class="color" style="background-color: red"></div>
+                                    <div class="color" style="background-color: blue"></div>
+                                    <div class="color" style="background-color: pink"></div>
+                                    <div class="color" style="background-color: red"></div>
+                                    <div class="color" style="background-color: blue"></div>
+                                    <div class="color" style="background-color: pink"></div>
+                                    <div class="color" style="background-color: red"></div>
+                                    <div class="color" style="background-color: blue"></div>
+                                    <div class="color" style="background-color: pink"></div>
+                                    <div class="color" style="background-color: red"></div>
+                                    <div class="color" style="background-color: blue"></div>
+                                    <div class="color" style="background-color: pink"></div>
+                                    <div class="color" style="background-color: red"></div>
+                                    <div class="color" style="background-color: blue"></div>
+                                    <div class="color" style="background-color: pink"></div>
+                                    <div class="color" style="background-color: red"></div>
+                                    <div class="color" style="background-color: blue"></div>
+                                    <div class="color" style="background-color: pink"></div>
+                                    <div class="color" style="background-color: blue"></div>
+                                    <div class="color" style="background-color: pink"></div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tools" name="Aplus" value="off"><img class='icon' src="imgs/icons/Aplus.svg">
+                            <div class='popup-tool' id='Aplus-popup'>
+                                <img class="arrow" src="imgs/icons/arrow_green_popup.svg">
+                                <a href="#" class="title1">Titre 1</a>
+                                <a href="#" class="para1">Paragraph 1</a>
+                                <a href="#" class="title2">Titre 2</a>
+                                <a href="#" class="para2">Paragraph 2</a>
+                                <a href="#" class="title3">Titre 3</a>
+                                <a href="#" class="para3">Paragraph 3</a>
+                            </div>
+                        </div>
+                        <div class="tools" name="code" value="off"><img class='icon' src="imgs/icons/code.svg">
+                            <div class='popup-tool' id='code-popup'>
+                                <img class="arrow" src="imgs/icons/arrow_green_popup.svg">
+                                <label>Add HTML code:</label>
+                                <textarea type='text' class='text-field' value='...'></textarea>
+                                <input type='submit' value='OK' class='btn-field'>
+                            </div>
+                        </div>-->
+                    </div>
+                
+            
+                    <div class='popup-save' id="popup-save">
+                        <h2>Save as draft</h2>
+                        <label>Name&nbsp&nbsp<input type='text' class='text-field' value='Enter name'></label>
+                        <label>Version<input type='text' class='text-field' id="version-field" value='Enter version'></label>
+                        <input type='submit' value='Save' class='btn-field'>
+                    </div>
+    
+                    <div class="showAllDrafts"></div>
+                    <div class="Publications"></div>
+                    <div class="Bibliography">
+                            <ul class="ulbib">
+                            <li class="libib"><h4>Styles</h4></li>
+                            <li class="libib">
+                                <!--<form action="#">-->
+                                <div class="checkmarkdiv">
+                                    <label class="roundcheckbox">APA<input type="checkbox" checked="checked"><span class="checkmark"></span></label>
+                                    <label class="roundcheckbox">MLA<input type="checkbox"><span class="checkmark"></span></label>
+                                    <label class="roundcheckbox">Harvard<input type="checkbox"><span class="checkmark"></span></label>
+                                    <label class="roundcheckbox">Chicago<input type="checkbox"><span class="checkmark"></span></label>
+                                </div>
+                            </li>
+
+                            <li class="libib">
+                                <div class="custom-select-div">
+                                    <div class="custom-select" style="width:120px;">
+                                        <select>
+                                                <option value="none">All</option>
+                                                <option value="APA">APA</option>
+                                                <option value="MLA">MLA</option>
+                                                <option value="Harvard">Harvard</option>
+                                                <option value="Chicago">Chicago</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                            <div class="textbibdiv">
+                                <textarea class="textbib" rows="4" cols="50" value="Add reference">Add reference...</textarea>
+                                <button>Add</button>
+                            </div>
+                        <div class="contentbib">
+                            <br><br>
+                            <h3>Arts & Science, Art & Mathematics</h3><br>
+                            <div class="bidon"></div>
+                            <div class="content" >
+                                <div class="notselected" id="layerbib">
+                                    <hr>
+                                    <p>Yussof, Kathryn. ed. London: BiPolar Arts Catalyst, 2008</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                 <div class="selected" id="layerbib">
+                                    <hr>
+                                    <p>Ascott Roy. Technoetic Arts. http://www.intellectbooks.com/journals lsdkflsjflsdjfjs</p>
+                                    <div class="buttonwrapper">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content" >
+                                <div class="notselected" id="layerbib">
+                                    <hr>
+                                    <p>Yussof, Kathryn. ed. London: BiPolar Arts Catalyst, 2008</p>
+                                    <div class="buttonwrapper">
+                                            <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Library">
+                        <div class="menulibrary">
+                            <div class="firstcolumn"><h5 class="selected">All </h5><h5 class="notselected"> | images | gifs | videos | sounds</h5></div>
+                            <div  class="secondcolumn">
+                                <button class='buttonlib'>Import</button>
+                                <button class='buttonlib'>Add</button>
+                                <button class='buttonlib'>Delete</button>
+                            </div>
+                        </div>
+                        <div class='item' id='1'>
+                            <div class='background'><img src='imgs/fakeLibrary/img0.jpg'><div class='layer'></div></div>
+                            <button class='add' id="openImage0">Add</button>
+
+                            <p>Title: <strong>vlavla</strong></p>
+                              <p class="center">  Date: <strong>05.1038</strong></p>
+                            <img class="type" src="imgs/icons/img_selected.svg" >
+
+                        </div>
+                        <div class='item' id='2'>
+                            <div class='background'><img src='imgs/fakeLibrary/img1.png'><div class='layer'></div></div>
+                            <button class='add' id="openImage1">Add</button>
+                        </div>
+                        <div class='item' id='3'>
+                            <div class='background'><img src='imgs/fakeLibrary/img2.jpeg'><div class='layer'></div></div>
+                            <button class='add' id="openImage2">Add</button>
+                        </div>
+                    </div>
+                    <% include ./partials/multiwindow %>
+                   <!-- <div class="Multiwindow"></div>-->
+                    <div class="Templates"></div>
+                    <div class="Bookmarks"></div>
+                    <div class="Codes"></div>
+                    <div class="point-popup" id="point-popup"></div>
+                    <div class="suggestions">
+                        <div class='suggestion-popup' id='suggestion-popup' state='off'>
+                            <div id='suggestion-popupheader'></div>
+                            <div class="send-area">
+                                <h1 class='title'>Suggestions</h1>
+                                <div class='suggestion-send'>
+                                    <textarea type='text' class='text-field' value=''>Send</textarea>
+                                    <button class='send'>Send</button>
+                                </div>
+                            </div>
+                            <div class="message-area">
+                                <img src='imgs/portraits/4.png' class="nickname-portrait">
+                                <h1 class="nickname">Ariane</h1>
+                                <p class='nicknametext'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            </div>
+                            <div class="message-area">
+                                <img src='imgs/portraits/4.png' class="nickname-portrait">
+                                <h1 class="nickname">Ariane</h1>
+                                <p class='nicknametext'>Lorem ipsum dolor sit amet, con pariatur.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="discussions">
+
+                        <!--<div class="discussion-popup" id="discussion-popup" state="off">
+                            <div id="discussion-popupheader"><h1>Discussion</h1></div>
+                            
+                            <button class="close">Close</button>
+                            <div class='discussion-intern' id='discussion-intern'>
+                                <div class="discussion-message-right">
+                                    <div class='arrowDiv'><img class='discussion-arrow' src='imgs/icons/arrow_right.svg'></div>
+                                    
+                                    <p class="message">Hello, my name is ipsum! Lorem ipus osdlej lakorisj mcxke isnkn kdfjn e alkj laskejedif kjn.</p>
+                                </div>
+                                <div class="discussion-message-right">
+                                        <div class='arrowDiv'><img class='discussion-arrow' src='imgs/icons/arrow_right.svg'></div>
+                                        
+                                        <p class="message">Hello, my name is ipsum! Lorem ipus osdlej lakorisj mcxke isnkn kdfjn e alkj laskejedif kjn.</p>
+                                    </div>
+                                <div class="discussion-message-left">
+                                        <div class=arrowDiv><img class="discussion-arrow" src="imgs/icons/arrow_left.svg"></div>
+                                    <p>Hi! thank you!</p>
+                                </div>
+                            </div>
+                            <div class='discussion-send'>
+                                <textarea type='text' class='text-field' value=''>Enter your text here....</textarea>
+                                <button class='send'>Send</button>
+                            </div>
+                        </div>-->
+                    </div>
+
+                    <!--
+                    <div class="comment-popup" id="comment-popup" state="off">
+                            <div id="comment-popupheader"><h1>Comment</h1></div>
+                            <div class="comment-send">
+                                <textarea type='text' class='text-field' value=''>Enter your text here....</textarea>
+                                <button class='send'>Send</button>
+                            </div>
+                        </div>
+                    </div>-->
+
+
+                    <canvas class="rdatas" id="rdatas" resize=true></canvas>
+                    <button class="saveSelection"></button>
+
+                    
+
+                    <div class="article" contenteditable="true" id="article">
+                           <!--<input type="button" onclick="removeLink2()" value="bla">-->
+                           <input type="button" onclick="insertHtag()" value="bla">
+                           <input type="button" onclick="removeHtag()" value="bla">
+                            <div>Some editable text text text</div>
+                            another test
+                             <h1>glou glou</h1>
+                            <div></div>
+                    </div>
+
+
+                </div>
+            </div>
+        
+       <% include ./partials/footer %>
+    </body>
+</html>

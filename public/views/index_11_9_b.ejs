@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html>
+    <% include ./partials/head %>
+    <!-- <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script> -->
+    <body>
+        <div class="main-container">
+                
+        
+                <% include ./partials/navbar %>
+                <% include ./partials/menu %>
+        
+                <hr><br><br>
+                <div class="workspace">
+                    
+                    <div id="tooldiv">
+                        <div id="tooldivheader"></div>
+                    </div>
+            
+                    <div class='popup-save' id="popup-save">
+                        <h2>Save as draft</h2>
+                        <label>Name&nbsp&nbsp<input type='text' class='text-field' value='Enter name'></label>
+                        <label>Version<input type='text' class='text-field' id="version-field" value='Enter version'></label>
+                        <input type='submit' value='Save' class='btn-field'>
+                    </div>
+    
+                    <div class="showAllDrafts"></div>
+                    <div class="Publications"></div>
+                    <div class="Bibliography">
+                            <ul class="ulbib">
+                            <li class="libib"><h4>Styles</h4></li>
+                            <li class="libib">
+                                <!--<form action="#">-->
+                                <div class="checkmarkdiv">
+                                    <label class="roundcheckbox">APA<input type="checkbox" checked="checked"><span class="checkmark"></span></label>
+                                    <label class="roundcheckbox">MLA<input type="checkbox"><span class="checkmark"></span></label>
+                                    <label class="roundcheckbox">Harvard<input type="checkbox"><span class="checkmark"></span></label>
+                                    <label class="roundcheckbox">Chicago<input type="checkbox"><span class="checkmark"></span></label>
+                                </div>
+                            </li>
+
+                            <li class="libib">
+                                <div class="custom-select-div">
+                                    <div class="custom-select" style="width:120px;">
+                                        <select>
+                                                <option value="none">All</option>
+                                                <option value="APA">APA</option>
+                                                <option value="MLA">MLA</option>
+                                                <option value="Harvard">Harvard</option>
+                                                <option value="Chicago">Chicago</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                            <div class="textbibdiv">
+                                <textarea class="textbib" rows="4" cols="50" value="Add reference">Add reference...</textarea>
+                                <button>Add</button>
+                            </div>
+                        <div class="contentbib">
+                            <br><br>
+                            <h3>Arts & Science, Art & Mathematics</h3><br>
+                            <div class="bidon"></div>
+                            <div class="content" >
+                                <div class="notselected" id="layerbib">
+                                    <hr>
+                                    <p>Yussof, Kathryn. ed. London: BiPolar Arts Catalyst, 2008</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                 <div class="selected" id="layerbib">
+                                    <hr>
+                                    <p>Ascott Roy. Technoetic Arts. http://www.intellectbooks.com/journals lsdkflsjflsdjfjs</p>
+                                    <div class="buttonwrapper">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content" >
+                                <div class="notselected" id="layerbib">
+                                    <hr>
+                                    <p>Yussof, Kathryn. ed. London: BiPolar Arts Catalyst, 2008</p>
+                                    <div class="buttonwrapper">
+                                            <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Library">
+                        <div class="menulibrary">
+                            <div class="firstcolumn"><h5 class="selected">All </h5><h5 class="notselected"> | images | gifs | videos | sounds</h5></div>
+                            <div  class="secondcolumn">
+                                <button class='buttonlib'>Import</button>
+                                <button class='buttonlib'>Add</button>
+                                <button class='buttonlib'>Delete</button>
+                            </div>
+                        </div>
+                        <div class='item' id='1'>
+                            <div class='background'><img src='imgs/fakeLibrary/img0.jpg'><div class='layer'></div></div>
+                            <button class='add' id="openImage0">Add</button>
+
+                            <p>Title: <strong>vlavla</strong></p>
+                              <p class="center">  Date: <strong>05.1038</strong></p>
+                            <img class="type" src="imgs/icons/img_selected.svg" >
+
+                        </div>
+                        <div class='item' id='2'>
+                            <div class='background'><img src='imgs/fakeLibrary/img1.png'><div class='layer'></div></div>
+                            <button class='add' id="openImage1">Add</button>
+                        </div>
+                        <div class='item' id='3'>
+                            <div class='background'><img src='imgs/fakeLibrary/img2.jpeg'><div class='layer'></div></div>
+                            <button class='add' id="openImage2">Add</button>
+                        </div>
+                    </div>
+                    <% include ./partials/multiwindow %>
+                   <!-- <div class="Multiwindow"></div>-->
+                    <div class="Templates"></div>
+                    <div class="Bookmarks"></div>
+                    <div class="Codes">
+                            <!-- <div id="editor"></div> -->
+                        
+                    </div>
+                    <div class="point-popup" id="point-popup"></div>
+                    <div class="suggestions">
+                        <div class='suggestion-popup' state='off' name="reader">
+                            <div class='suggestion-popupheader' id='suggestion-popupheader' name="reader"></div>
+                            <h1 class='title'>Suggestions</h1>
+                            <button class="close">Close</button>
+                            <div class="send-area">
+                               <!-- <h1 class='title'>Suggestions</h1>-->
+                                <div class='suggestion-send'>
+                                    <textarea type='text' class='text-field' value=''>Send</textarea>
+                                    <button class='send'>Send</button>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="discussions"></div>
+
+                    <canvas class="rdatas" id="rdatas" resize=true></canvas>
+                    <button class="saveSelection"></button>
+
+                    <!-- <div class="article" contenteditable="true" id="article"> -->
+                    <div class="article" id="article">
+                        <!-- <iframe id='iframe' frameBorder="0" contenteditable="true"></iframe> -->
+                           <!-- <input type="button" onclick="insertHtag()" value="bla"> -->
+                           <!-- <input type="button" onclick="removeHtag()" value="bla"> -->
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div id="container">
+            <div id="editor"></div>
+            <iframe id='iframe' frameBorder="0" contenteditable="true"></iframe>
+            </div>
+        
+       <% include ./partials/footer %>
+    </body>
+</html>

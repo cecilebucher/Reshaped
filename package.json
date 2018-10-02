@@ -1,0 +1,22 @@
+{
+  "name": "version_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "codemirror": "^5.40.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "highlight.js": "^9.12.0",
+    "jquery": "^3.3.1",
+    "paper": "^0.11.5",
+    "prettify-html": "0.0.2",
+    "serve-static": "^1.13.2",
+    "socket.io": "^2.1.1"
+  }
+}

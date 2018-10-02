@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+    <% include ./partials/head %>
+    <body>
+        <div class="main-container">
+
+            <% include ./partials/navbar %>
+            <% include ./partials/menu %>
+        
+            <div class="workspace">
+          
+                <div id="tooldiv">
+                    <div id="tooldivheader"></div>
+                </div>
+
+                <div class='popup-save' id="popup-save">
+                    <h2>Save as draft</h2>
+                    <label>Name&nbsp&nbsp<input type='text' class='text-field' value='Enter name'></label>
+                    <label>Version<input type='text' class='text-field' id="version-field" value='Enter version'></label>
+                    <input type='submit' value='Save' class='btn-field'>
+                </div>
+
+                <div class="showAllDrafts"></div>
+                <div class="Publications"></div>
+                <% include ./partials/bibliography %>
+                <% include ./partials/library %>
+                <% include ./partials/multiwindow %>
+                <div class="printpdf"><img src="imgs/fake_pdf.png" width="500px"></div>
+                <div class="Templates"></div>
+                <div class="Bookmarks"></div>
+                <div class="Codes">
+                    <div id="editor"></div>
+                </div>
+                <!-- <div class="point-popup" id="point-popup"></div> -->
+                <div class="point-popup" id="point-popup">
+                    <img src="imgs/icons/bulle.png">
+                    <p class="firstline">here is a text</p>
+                    <p class="secondline">here is another text</p>
+                </div>
+                <div class="suggestions">
+                    <div class='suggestion-popup' state='off' name="reader">
+                        <div class='suggestion-popupheader' id='suggestion-popupheader' name="reader"></div>
+                        <h1 class='title'>Suggestions</h1>
+                        <button class="close">Close</button>
+                        <div class="send-area">
+                            <!-- <h1 class='title'>Suggestions</h1>-->
+                            <div class='suggestion-send'>
+                                <textarea type='text' class='text-field' value=''>Send</textarea>
+                                <button class='send'>Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="discussions"></div>
+                <div class="rdatasContainer">
+                    <p class='textVert1'>Shaped</p>
+                    <p class='textVert2'>Reshaped</p>
+                    <p class="text1"><strong>01. </strong>2018</p>
+                    <p class="text2"><strong>02. </strong>2018</p>
+                    <p class="text3"><strong>03. </strong>2018</p>
+                    <p class="text4"><strong>04. </strong>2018</p>
+                    <p class="text5"><strong>05. </strong>2018</p>
+                    <p class="text6"><strong>06. </strong>2018</p>
+                    <p class="text7"><strong>07. </strong>2018</p>
+                    <canvas class="rdatas" id="rdatas" resize=true></canvas>
+                </div>
+                <!-- <div class='articlecontent' id='article0' contenteditable="false"> -->
+
+                
+            </div>
+
+        </div>
+        <div class="articles">
+           <div class='articlecontent' id='article0' contenteditable="true" spellcheck="false"></div>
+            </div>
+           <!-- <br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="bidou()" id='bidou'>BIDOU</button>
+            <button onclick="bidou2()" id='bidou2'>BIDOU2</button>
+            <button onclick="bidou3()" id='bidou3'>BIDOU3</button>
+           -->
+           <!-- <img src="../imgs/assets/arrow-rightlk.svg"> -->
+    
+       <% include ./partials/footer %>
+    </body>
+</html>
