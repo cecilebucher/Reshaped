@@ -3501,7 +3501,7 @@ span.commentspan {
 #articleDavid1 .author {font-weight: 700; color:black;}
 #articleDavid1 #container {width: 75%; font-size: 14px; margin-top: 80px}
 #articleDavid1 sup, #articleDavid1 b {font-weight: 700}
-#articleDavid1 img.david {margin-top: 30px; margin-bottom: 20px; width: 100%}
+#articleDavid1 img.david {margin-top: 30px; margin-bottom: 20px; width: 100% !important}
 #articleDavid1 .col2 {columns: 2; column-width: 100px; column-gap: 50px }
 #articleDavid1 .title {font-family: 'Noto Serif JP', sans-serif; font-weight: 700; font-size: 18px; margin-top:40px;}
 #articleDavid1 .footnote {font-size: 11px;margin-top: 40px;}
