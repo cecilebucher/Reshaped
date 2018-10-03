@@ -104,7 +104,7 @@ body {
     padding: 0px;
     /* width: 1450px; */
     width: 100vw;
-    z-index:20;
+    z-index:70;
     
 }
 
@@ -371,6 +371,7 @@ li .dropbtnTest {
     color: white;
     text-align: center;
     text-decoration: none;
+    z-index:91;
 }
 
 li.dropdownTest:hover .dropbtnTest {

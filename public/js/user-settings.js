@@ -79,7 +79,7 @@ function manageNavbar() {
         publication_delay = 500;
 
         // TODO: undcomment following line to remove fake entry
-        username = "dbihanic";
+        //username = "dbihanic";
 
         var user = getUserData(username);
         if(user != undefined){
