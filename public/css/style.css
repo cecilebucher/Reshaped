@@ -951,9 +951,9 @@ a.unforceselection2 {
 .printpdf {
     display: none;
     /* position: absolute; */
-    position: fixed;
-    width: 530px;
-    height: 100vh;
+    position: fixed;  
+    height: 100%;
+    width: auto;
     top: 48px;
     right: 0px;
     z-index: 15;
