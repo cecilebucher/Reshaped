@@ -289,7 +289,12 @@ function showRpoints() {
     console.log("--> show Rpoints");
     rpoints_on = true;
     loadBackground();
-    loadRpoints();
+    if(current_profile == "designer"){
+        loadRpoints();
+    } else {
+        loadRviz();
+    }
+    
     //var $Rpoints_div = $(".rdatas");
     //$Rpoints_div.show("slide", { direction: "left" }, anim_time_show);
     //$(".rdatas").show();

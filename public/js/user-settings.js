@@ -79,7 +79,7 @@ function manageNavbar() {
         publication_delay = 500;
 
         // TODO: undcomment following line to remove fake entry
-        //username = "dbihanic";
+        username = "dbihanic";
 
         var user = getUserData(username);
         if(user != undefined){
@@ -476,8 +476,10 @@ function manageProfileMenu() {
                    // and this is even more uglier... didnt know thow to make it relative without expanding box on the left
                    if(profile_id == "author" || profile_id == "designer"){
                         $(".dropdown-drafts-content").css("top","312px");
+                        $(".dropdown-drafts-content").css("z-index","200");
                    }else if(profile_id == "publisher"){
                         $(".dropdown-drafts-content").css("top","285px");
+                        $(".dropdown-drafts-content").css("z-index","200");
                    }
                }else if(value == "Viewmodes"){
                     var html_code = "<div class='dropdown-modes'>";
