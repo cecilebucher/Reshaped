@@ -1784,7 +1784,7 @@ a.unforceselection2 {
 #tooldiv {
     position: absolute;
     display: none; 
-    z-index: 25;
+    z-index: 250;
     background-color: var(--color-back);
     /* background-color: pink; */
     color: #fff;
@@ -1795,7 +1795,7 @@ a.unforceselection2 {
 #tooldivheader {
     padding-bottom: 25px;
     cursor: move;
-    z-index: 26;
+    z-index: 260;
     height:20px;
     background-color: var(--color-back);
     background-color:rgba(0,0,0,0.0);
@@ -2367,7 +2367,7 @@ a.unforceselection2 {
 /* disable tag matching */
 .ace_editor .ace_marker-layer .ace_bracket { display: none }
 
-.articlecontent img {
+.articlecontent img.article {
     width:350px;
     height: 215px;
 }
@@ -2461,13 +2461,13 @@ a.unforceselection2 {
     background-color: var(--color-back);
     border-radius: 10px;
     padding: 0px 10px 5px 10px;
-    z-index:14;
+    z-index:240;
 }
 
 #discussion-popupheader {
     padding-bottom: 25px;
     cursor: move;
-    z-index: 15;
+    z-index: 250;
     height:10px;
     /* background-color: var(--color-back); */
     /* background-color: red; */
@@ -2523,6 +2523,7 @@ a.unforceselection2 {
     width: 100%;
     height: 65%;
     padding-top: 20px;
+    overflow:auto;
     /* margin: 20px 20px 20px 20px; */
 }
 
@@ -2536,6 +2537,7 @@ a.unforceselection2 {
     padding: 3px 10px 3px 10px;
     margin-bottom:15px;
     overflow: hidden;
+    word-wrap: break-word;
 }
 
 .discussion-message-left {
@@ -2630,8 +2632,14 @@ a.unforceselection2 {
 }
 
 img.discussion {
-    width:25px;
-    height:25px;
+    width:20px !important;
+    /* height:20px !important; */
+    /* padding-bottom: -10px; */
+    padding-left:3px;
+    padding-right:5px;
+    padding-bottom: 0px;
+    padding-top:3px;
+    /* margin:0px; */
     cursor: pointer;
     /* top:-10px; */
 }
@@ -3244,7 +3252,7 @@ span.commentspan {
     display: none;
     position: absolute;
     top: 15%;
-    left: 30%;
+    left: 40%;
     width: 300px;
     height: 200px;
     background-color: var(--color-back);
@@ -3259,7 +3267,7 @@ span.commentspan {
     display: none;
     position: absolute;
     top: 15%;
-    left: 30%;
+    left: 40%;
     width: 300px;
     height: 40px;
     background-color: var(--color-back);
@@ -3407,7 +3415,7 @@ span.commentspan {
     background-color: rgb(0,0,0,0);
     outline: none;
     border: none;
-    width: 88%;
+    /* width: 88%; */
     height: 65%;
     padding: 10px 10px 10px 10px;
     margin-bottom:0px;
@@ -3469,7 +3477,7 @@ span.commentspan {
 #articleDavid3 #container {width: 60%; font-size: 16px; margin-top: 50px}
 #articleDavid3 sup, #articleDavid3  b {font-weight: 700}
 #articleDavid3 .legend {color:gray; font-size: 12px; margin-bottom: 30px; margin-top: 0px}
-#articleDavid3 img {margin-top: 30px; margin-bottom: 20px; width: 100%; height: auto;}
+#articleDavid3 img.david {margin-top: 30px; margin-bottom: 20px; width: 100%; height: auto;}
 #articleDavid3 .title {font-weight: 700; font-size: 20px; margin-top:40px;}
 #articleDavid3 .footnote {font-size: 11px;}
 #articleDavid3 a {color:#188f9b;}
@@ -3492,7 +3500,7 @@ span.commentspan {
 #articleDavid1 .author {font-weight: 700; color:black;}
 #articleDavid1 #container {width: 75%; font-size: 14px; margin-top: 80px}
 #articleDavid1 sup, #articleDavid1 b {font-weight: 700}
-#articleDavid1 img {margin-top: 30px; margin-bottom: 20px; width: 100%}
+#articleDavid1 img.david {margin-top: 30px; margin-bottom: 20px; width: 100%}
 #articleDavid1 .col2 {columns: 2; column-width: 100px; column-gap: 50px }
 #articleDavid1 .title {font-family: 'Noto Serif JP', sans-serif; font-weight: 700; font-size: 18px; margin-top:40px;}
 #articleDavid1 .footnote {font-size: 11px;margin-top: 40px;}

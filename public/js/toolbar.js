@@ -258,7 +258,7 @@ function wrapWithIconDiscussion(path) {
         var id = discussion_id_name + discussion_id_counter;
         current_discussion_id = id;
         console.log("discusion id",id);
-        var html_code = "<img src='imgs/icons/note.svg' class='discussion' id='" + id + "'>";
+        var html_code = "<img src='imgs/icons/note.png' class='discussion' id='" + id + "'>";
         document.execCommand("insertHTML",false,html_code);
         discussion_id_counter++;
 
@@ -556,7 +556,7 @@ function createSuggestionPopup(articleId){
     newDiv.attr("eltID",articleId);
     console.log("article ID",articleId);
     newDiv.css('top',"100px");
-    newDiv.css('left',"100px");
+    newDiv.css('left',"220px");
     $(".suggestions").append(newDiv);
     newDiv.mousedown(handle_mousedown);
     newDiv.show();
