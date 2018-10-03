@@ -301,7 +301,7 @@ function showRviz() {
     console.log("--> show Rviz");
     rviz_on = true;
     loadBackground();
-    //loadRviz();
+    loadRviz();
     //$(".rdatas").show();
     var $RpointsContainer = $(".rdatasContainer");
     $RpointsContainer.show("slide", { direction: "left" }, anim_time_show);
@@ -581,6 +581,7 @@ function applyBackgroundColorToArticle(color){
     console.log("--> apply background color to article",color);
     if(color == "none") return;
     $(".articles").css("background-color",color);
+    $(".articlecontent").css("background-color",color);
     $(".articlecontent").attr("backcolor",color);
 }
 
@@ -588,6 +589,7 @@ function applyFontColorToArticle(color){
     console.log("--> apply font color to article",color);
     if(color == "none") return;
     // $(".articles:header").css("color",color.hexString + " !important");//doesn't seeem to work...
+    // quick and dirty solution
     $(".articles p").css("color",color);
     $(".articles h1").css("color",color);
     $(".articles h2").css("color",color);

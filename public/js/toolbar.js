@@ -1124,7 +1124,7 @@ function dragElement2(eltID,idheader) {
 // just use for the tooldiv in the end.. other function used for the other movable div..
 function dragElement(elmnt,idnameheader,keyword) {
 
-    console.log("drag element", elmnt);
+    //console.log("drag element", elmnt);
     if(elmnt == null) return;
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 

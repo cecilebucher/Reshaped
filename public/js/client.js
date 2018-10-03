@@ -60,8 +60,8 @@ socket.on('newRpoints', function(rpoints){
 });
 
 socket.on('newRviz', function(rviz){
-    //showRviz(rviz);
-    showRpoints(rviz);
+    showRviz(rviz);
+    //showRpoints(rviz);
 });
 
 socket.on('newCode', function(code){

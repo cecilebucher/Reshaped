@@ -1,3 +1,4 @@
+var radius_miniCircle = 2;
 var radius_circle = 4;
 var radius_circle_outside = 8;
 var nb_rect = 7;
@@ -43,31 +44,39 @@ function getViz(id) {
     return undefined;
 }
 
-function drawCircle(line, perc) {
+function drawCircle(line, perc, viz) {
     var x = x_min + line * step_x;
     var y = y_middle - perc * (h_rect * 0.5);
 
     var circle = new paper.Path.Circle(new paper.Point(x, y), radius_circle);
     circle.fillColor = 'white';
     circle.opacity = 0.8;
+    var greenCircle = new paper.Path.Circle(new paper.Point(x, y), radius_miniCircle);
+    greenCircle.fillColor = '#087208';
+    greenCircle.opacity = 0.0;
     //console.log("circle id",circle.id);
     var circle_outside = new paper.Path.Circle({
         center: new paper.Point(x, y),
         radius: radius_circle_outside,
         fillColor: 'white'
     });
-    // circle_outside.fillColor = 'red';
+    //circle_outside.fillColor = 'red';
     circle_outside.opacity = 0.01;
     //console.log("circle id",circle_outside.id);
 
+    if(viz != undefined){
+        viz.id = circle_outside.id;
+        viz.circle = circle;
+        viz.greenCircle = greenCircle;
+    }
 
     // When the mouse enters the item, set its fill color to red:
     circle_outside.onMouseEnter = function (event) {
         //this.opacity = 1.0;
         //console.log("yup",$("#point-popup"));
-        console.log("******");
-        console.log("on mouse enter", this.id);
-        console.log("on mouse enter", circle_outside.id);
+        //console.log("******");
+        //console.log("on mouse enter", this.id);
+        //console.log("on mouse enter", circle_outside.id);
         var id = circle_outside.id;
         var viz = getViz(id);
         if (viz != undefined) {
@@ -80,6 +89,8 @@ function drawCircle(line, perc) {
             if (viz.text_secondline != undefined) {
                 $("#point-popup p.secondline").text(viz.text_secondline);
             }
+            viz.circle.opacity = 1.0;
+            viz.greenCircle.opacity = 1.0;
             //$("#point-popup").css("width","400px");
             //$("#point-popup").css("height","5px");
         }
@@ -91,10 +102,16 @@ function drawCircle(line, perc) {
         //console.log("on mouse leave",this.id);
         //console.log("on mouse leave",circle_outside.id);
         //console.log("******");
+        var id = circle_outside.id;
+        var viz = getViz(id);
+        if (viz != undefined) {
+            viz.circle.opacity = 0.8;
+            viz.greenCircle.opacity = 0.0;
+        }
         $("#point-popup").hide();
     }
 
-    return circle_outside.id;
+    //return circle_outside.id;
 }
 
 
@@ -105,6 +122,8 @@ function initCanvas() {
 
 
 function loadBackground() {
+
+    //console.log("load background");
     // Get a reference to the canvas object
     var canvas = document.getElementById('rdatas');
 
@@ -191,15 +210,19 @@ function loadRpoints() {
 
     // retrieve informations from the database and draw the white cicles
     var nb_vertical_lines = 0;
+    var pt = 0;
     //var days = [0,30,58,88,117,147,176];
     var days = [0, 31, 60, 91, 121, 152, 182];
     for (viz of designer_points) {
         var nb_vertical_lines = days[viz.day-1];
         var vert_line = parseInt(nb_vertical_lines) + parseInt(viz.vertical_line);
-        var id = drawCircle(parseInt(vert_line), viz.perc, viz.id);
-        viz.id = id;
+        // var id = drawCircle(parseInt(vert_line), viz.perc, viz);
+        drawCircle(parseInt(vert_line), viz.perc, viz);
+        //viz.id = id;
+        pt++;
         //console.log("point:", "day", viz.day - 1, "vert line", viz.vertical_line, "total revious lines", nb_vertical_lines, "final line", vert_line);
     }
+    //console.log("nb points",pt);
 
     //drawCircle(20,-0.25);
     //drawCircle(10,-0.75);
@@ -210,7 +233,7 @@ function loadRpoints() {
 function loadRviz() {
 
     // retrieve informations from the database and draw the white cicles
-    //drawCircle(60,0.5);
+    drawCircle(-500,0.0, undefined);
     //drawCircle(10,0.1);
     //drawCircle(35,0.35);
 

@@ -112,7 +112,7 @@ body {
     background: red;
     width: 180px;
     height:100vh !important;
-    position:fixed !important;
+    /* position:fixed !important; */
     /*grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -258,8 +258,13 @@ body {
 }
 
 
+.horizontal-navbar .profile2 {
+    padding: 0px 10px 8px -10px;
+    margin-left:-5px;
+}
+
 .horizontal-navbar .profile {
-    padding: 0px 10px 10px 10px;
+    padding: 0px 10px 8px 10px;
 }
 
 .horizontal-navbar #specialsuggestion a{
@@ -278,7 +283,7 @@ body {
 /* LOGO on the left */
 .logo-icon {
     height: 30px;
-    padding: 10px 0px 12px 20px;
+    padding: 10px 0px 10px 20px;
     margin: -20px;
 }
 
@@ -2310,7 +2315,7 @@ a.unforceselection2 {
     /* width:100vw; */
     /* height:100vh; */
     width:100%;
-    height:100%;
+    height:auto;
     /* background-color: lightskyblue; */
     z-index:10; /* on l avait mis à moin 1 ....*/
     /* padding: 50px 40px 100px 40px; */
@@ -2330,24 +2335,20 @@ a.unforceselection2 {
 .articlecontent {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: auto;
     /* top: 38px; */
     /* left: 180px; */
     top:0px;
     left:0px;
     
-    margin-left: 40px;
+    /* margin-left: 40px;
     margin-top: 50px;
     margin-right:40px;
-    margin-bottom: 100px;
+    margin-bottom: 100px; */
+    padding: 50px 40px 100px 40px;
     
-    padding:10px;
+    /* padding:10px; */
     outline: none;
-    /* outline-color: var(--color-back); */
-    /* outline-width: medium; */
-    /* background-color: lightgrey; */
-
-    /* max-width: 100px; */
     word-wrap: break-word;
     z-index: 10;
 }

@@ -79,7 +79,7 @@ function manageNavbar() {
         publication_delay = 500;
 
         // TODO: undcomment following line to remove fake entry
-        username = "dbihanic";
+        //username = "dbihanic";
 
         var user = getUserData(username);
         if(user != undefined){
@@ -510,7 +510,11 @@ function manageProfileMenu() {
             // hard code for now... will work on it later...
             $profile_menu.append("<br>");
             $profile_menu.append("<a href='#' class='notclickable'>Networks</a>");
-            $profile_menu.append("<a href='#' id='" + profile_id + "' name='rpoints' >R/points</a>");
+            if(profile_id == "designer") {
+                $profile_menu.append("<a href='#' id='" + profile_id + "' name='rpoints' >R/points (73)</a>");
+            } else {
+                $profile_menu.append("<a href='#' id='" + profile_id + "' name='rpoints' >R/points</a>");
+            }
             $profile_menu.append("<a href='#' id='" + profile_id + "' name='rviz' >R/viz</a>");
 
             var right_menu_has_been_clicked = false;
@@ -732,9 +736,9 @@ $( document ).ready(function() {
     //setToolbar("author");
     //showToolbar();
 
-    $(".login .btn-field").click();
+    //$(".login .btn-field").click();
    // $(".logout #designer").click();
-    $("#profile-menu").find("a[name='Multi-window mode']").click();
+    //$("#profile-menu").find("a[name='Multi-window mode']").click();
 
 
     setupEditor();

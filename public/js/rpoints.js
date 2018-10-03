@@ -4,28 +4,28 @@ var designer_points = [
 
 { 
     day: "1", // from 0 to 6
-    vertical_line: "0", // from 0 to 29
+    vertical_line: "1", // from 0 to 29
     perc: "0.35",
     text_firstline: "01.03.2018. Shaped",
     text_secondline: "Style: Contrast 20%; Font:Times; H1: 23pt",
 },
 {
     day: "1",// from 0 to 6
-    vertical_line: "0", // from 0 to 29
+    vertical_line: "1", // from 0 to 29
     perc: "0.12",
     text_firstline: "01.01.2018. Shaped",
     text_secondline: "Style: Color #555555",
 },
 {
 day: "1",
-vertical_line: "0", 
+vertical_line: "1", 
 perc: "-0.82",
 text_firstline: "01.01.2018. Reshaped",
 text_secondline: "Style: Color #555555; Font: Arial sans-serif",
 },
 {
 day: "1",
-vertical_line: "1",
+vertical_line: "2",
 perc: "0.89",
 text_firstline: "02.01.2018. Shaped",
 text_secondline: "Font: Founders G Bold",
