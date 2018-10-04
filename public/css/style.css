@@ -2906,7 +2906,7 @@ span.commentspan {
 }
 
 .ui-accordion .ui-accordion-content{
-    padding:0px 35px 35px 35px;
+    /* padding:0px 35px 35px 35px; */
     /* padding:0px 15px 15px 15px; */
     /* padding:0px 15px 15px 15px; */
     padding: 0px 0px 10px 15px;
