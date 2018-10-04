@@ -131,7 +131,7 @@ function loadBackground() {
     paper.setup(canvas);
 
     var gap_rect = 8;
-    var h_rect = 1040; // 830 pour 1080 
+    var h_rect = 940;//1040; // 830 pour 1080 
     var w_rect_0 = step_x * 30;
     var w_rect_1 = step_x * 28;
     var w_rect_2 = step_x * 30;
