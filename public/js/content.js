@@ -297,7 +297,7 @@ function showRpoints() {
     
     //var $Rpoints_div = $(".rdatas");
     //$Rpoints_div.show("slide", { direction: "left" }, anim_time_show);
-    //$(".rdatas").show();
+    $(".rdatas").show();
     var $RpointsContainer = $(".rdatasContainer");
     $RpointsContainer.show("slide", { direction: "left" }, anim_time_show);
 }
@@ -307,7 +307,7 @@ function showRviz() {
     rviz_on = true;
     loadBackground();
     loadRviz();
-    //$(".rdatas").show();
+    $(".rdatas").show();
     var $RpointsContainer = $(".rdatasContainer");
     $RpointsContainer.show("slide", { direction: "left" }, anim_time_show);
 }
@@ -391,7 +391,7 @@ function hideBottomPanel(type_name) {
 function hidePanel(type_name,use_animation) {
     console.log("--> hiding panel ","."+type_name);
     if(type_name == "rpoints" || type_name == "rviz"){
-        //$(".rdatas").hide();
+        $(".rdatas").hide();
         var $panel = $(".rdatasContainer");
         if(use_animation){
             $panel.hide("slide", {direction: "left"}, anim_time_hide); 
