@@ -2351,7 +2351,7 @@ a.unforceselection2 {
 .articlecontent {
     position: absolute;
     width: 100%;
-     min-height: 100vh;
+    min-height: 100vh;
     height: auto;
     /* top: 38px; */
     /* left: 180px; */
@@ -2362,7 +2362,8 @@ a.unforceselection2 {
     margin-top: 50px;
     margin-right:40px;
     margin-bottom: 100px; */
-    padding: 50px 40px 100px 40px;
+    
+    /* padding: 50px 40px 100px 40px; */ /* REMOVE IN LAST MINUTE */
     
     /* padding:10px; */
     outline: none;
