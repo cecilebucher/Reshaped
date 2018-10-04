@@ -219,7 +219,7 @@ function applyToolFromPopup(keyname,value) {
         }
         font_type = value;
     }else if(action == "changelineheight"){
-        borto.wrapSelection("<p style='height: "+ value + "px;'/>");
+        //borto.wrapSelection("<p style='height: "+ value + "px;'/>");
     }else if(action == "createLink"){   
         var html_value = "<a href='" + value + "' ";
         html_value += "onClick=\"window.open('" + value + "')\"";

@@ -2291,7 +2291,7 @@ a.unforceselection2 {
     padding:10px;
     outline-color: var(--color-back);
     outline-width: medium;
-    background-color: red;
+    /* background-color: red; */
 }
 
 #editor {
@@ -2372,6 +2372,9 @@ a.unforceselection2 {
     z-index: 10;
 }
 
+.articlecontent h4, h5, h6 {
+    font-weight: normal;
+}
 
 
 /* html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden;} */

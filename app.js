@@ -58,7 +58,7 @@ var publications = [
         filename: 'Toward a Theory of Architecture Machines',
         author: 'Nicholas Negroponte',
         content: db_files.article_1(),
-        image: 'imgs/article/img_1.jpg',
+        image: 'imgs/article/img_4.jpg',
         portrait: "imgs/portraits/10.png",
         email: "info@nicholasnegroponte.com",
         version: "1.0",

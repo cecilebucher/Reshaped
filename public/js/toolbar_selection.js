@@ -77,11 +77,15 @@ function getSelectedNodes() {
 }
 
 function replaceWithOwnChildren(el) {
-    var parent = el.parentNode;
-    while (el.hasChildNodes()) {
-        parent.insertBefore(el.firstChild, el);
+    if(el != null && el != undefined){
+        var parent = el.parentNode;
+        if(parent != null && parent != undefined){
+            while (el.hasChildNodes()) {
+                parent.insertBefore(el.firstChild, el);
+            }
+            parent.removeChild(el);
+        }
     }
-    parent.removeChild(el);
 }
 
 function removeSelectedElements(tagNames) {
