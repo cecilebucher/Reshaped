@@ -116,7 +116,7 @@ body {
     width: 180px;
     height:100vh !important;
     position:fixed !important;
-    top: 60px; /* 49 */
+    top: 49px !important; /* 49 */
     background-color: rgb(234, 241, 234);
     z-index:60;
     margin: 0px;

@@ -94,6 +94,7 @@ function manageNavbar() {
             $(".horizontal-navbar .logo").hide();
             $(".horizontal-navbar .login").slideUp(350,"swing",function() {
                 $(".horizontal-navbar .logout").slideDown(350,"swing");
+                $(".vertical-navbar").css("top","49px");
                 $(".vertical-navbar").show("slide", { direction: "left" }, 500);
             });
 
