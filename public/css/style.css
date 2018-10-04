@@ -2998,7 +2998,8 @@ span.commentspan {
 .Multiwindow .content .raw .col-4{
 	display: grid;
 	/* width:24%; */
-	width:40%;
+	/* width:40%; */
+	width:60%;
 	float: left;
 	margin-right:1%;
 	margin-bottom:1%;
