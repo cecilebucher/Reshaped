@@ -2934,7 +2934,7 @@ span.commentspan {
 
     /* position: absolute; */
     position: fixed;
-    top: 48px !important;
+    top: 48px;
     right:0px !important;
     z-index:15;
     display: none;
@@ -2946,7 +2946,7 @@ span.commentspan {
 	/* min-width:590px; */
 	height:95vh;
 	max-height: 100vh;
-	padding:1%;
+	padding:20px !important;
 	background: #18b118;
 	font-weight: 100;
 	font-size: 14px;
