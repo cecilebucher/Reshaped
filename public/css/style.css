@@ -2933,8 +2933,8 @@ span.commentspan {
 .Multiwindow{
 
     /* position: absolute; */
-    position: fixed;
-    top: 48px;
+    position: fixed !important;
+    top: 48px !important;
     right:0px;
     z-index:15;
     display: none;
