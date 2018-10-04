@@ -226,25 +226,34 @@ function initNavbar() {
 
     // CLICK ON SAVE
     $(".logout #save").on("click",function() {
-        console.log("---> save");
+
         var filename = $(".articlecontent").attr("name");
         var version = $(".articlecontent").attr("version");
-        if(filename == undefined) filename = "Enter name";
-        if(version == undefined) versionname = "Enter version"
-        console.log("filename",filename);
-        $("#popup-save #text-field").val(filename);
+        console.log("---> save popup",filename,version);
+        if(filename == undefined || filename.length == 0) filename = "Enter name";
+        if(version == undefined || version.length == 0) version = "Enter version";
+    
+        
+        $("#popup-save .text-field").val(filename);
+        $("#popup-save #version-field").val(version);
         $("#popup-save").fadeIn(500);
     });
 
     // CLICK ON POPUP-SAVE - when saving draft
     $("#popup-save .btn-field").on("click", function() {
+        console.log("---> save article");
         var filename = $(this).parent().find(".text-field").val();
         var version = $(this).parent().find("#version-field").val();
+        $(".articlecontent").attr("name",filename);
+        $(".articlecontent").attr("version",version);
+
         console.log("filename",filename);
         var back_color = $(".articlecontent").attr("backcolor");
         console.log("background_color",back_color);
         var color = $(".articlecontent").attr("color");
         console.log("color",color);
+        var id = $(".articlecontent").attr("id");
+        console.log("filename",filename, "saving .. is ID already defined",id);
         $("#popup-save").fadeOut(500);
         save($(".articlecontent").html(),filename,version,back_color,color);
     });
@@ -316,9 +325,10 @@ function setNavButtons(profile_id, publication_on) {
         case "author":
         case "publisher":
             $(".logout #print").parent().show();
-            $(".logout #save").parent().show();
             if(publication_on){
                 showSuggestionsIcon();
+            }else {
+                $(".logout #save").parent().show();
             }
             //$(".logout #sharewith").parent().show();
         break;

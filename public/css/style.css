@@ -113,6 +113,7 @@ body {
     width: 180px;
     height:100vh !important;
     position:fixed !important;
+    /* position:fixed; */
     /*grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -439,6 +440,7 @@ li.dropdownTest {
     position: absolute;
     display: none;
     top: 49px;
+    /* top: 60px; */
     margin: 0px;
     width: 180px;
     height: 100vh;
@@ -679,7 +681,7 @@ a.unforceselection2 {
     line-height: 1.6;
     /* background: rgb(226, 164, 164);  */
 } 
-
+ 
 .container p.ref{
     font-size: 11px;
 }
@@ -2342,6 +2344,7 @@ a.unforceselection2 {
 .articlecontent {
     position: absolute;
     width: 100%;
+     min-height: 100vh;
     height: auto;
     /* top: 38px; */
     /* left: 180px; */

@@ -313,7 +313,7 @@ function showRviz() {
 }
 
 function showMultiwindow() {
-    console.log("---> show multiwindow mode");
+    console.log("---> show multiwindow mode", current_article_id);
     Multiwindow_on = true;
     var $multiwindow_div = $(".Multiwindow");
     $multiwindow_div.show("slide", { direction: "right"}, anim_time_show);
@@ -321,8 +321,20 @@ function showMultiwindow() {
     allowColorChange = true;
     allowBackgroundColorChange = true;
     var $codes_div = $(".Codes");
-    if(Article_on){
-        var html_content = $("#"+current_article_id).html();
+    if(Article_on || Draft_on){
+        /*
+        console.log("in here article or draft is open");
+
+        console.log("**********");
+        console.log("???",$(".articles").html(),"???");
+        console.log("###",$(".articlecontent").attr('id'));
+        console.log("###",$(".articlecontent").html());
+        console.log("**********");
+        */
+
+        //var html_content = $("#"+current_article_id).html();
+        //console.log("html_content",html_content);
+        var html_content = $(".articlecontent").html();
         insertArticle(html_content);
     }
     $codes_div.show("slide", { direction: "left"}, anim_time_show);
@@ -331,9 +343,15 @@ function showMultiwindow() {
 function openNewDraft() {
     closeArticle();
     Article_on = true;
+    Publication_on = false;
     Draft_on = true;
     console.log("--> open new draft");
     $(".articlecontent").empty();
+    $(".articlecontent").attr("name","");
+    $(".articlecontent").attr("version","");
+    //$(".articlecontent").attr("id",draft.id);
+    //$(".articlecontent").attr("backcolor",draft.background_color);
+    //$(".articlecontent").attr("color",draft.color);
     $(".articlecontent").html("<p>Enter your text here...</p>");
 }
 
@@ -400,6 +418,9 @@ function showDraft(draft){
     closeArticle();
     Article_on = true;
     Draft_on = true;
+
+    current_article_id = draft.id;
+
     console.log("--> show draft",draft.id, draft.filename,current_profile);
     // we hide first the drafts panel
     Drafts_on = false;
@@ -420,6 +441,11 @@ function showDraft(draft){
 
     //console.log("first test:",draft.content);
     //console.log("second test",$(".articlecontent").html());
+    /*console.log("**********");
+    console.log("###",$(".articlecontent").attr('id'));
+    console.log("###",$(".articlecontent").html(draft.content));
+    console.log("**********");
+    */
 
     applyBackgroundColorToArticle(draft.background_color);
     applyFontColorToArticle(draft.color);
@@ -429,6 +455,11 @@ function showDraft(draft){
         removeComments();
     }
 
+    // we update the multi-window editor in case it has been already opened
+    console.log("---------> updating html content");
+    var html_content = $(".articles #"+current_article_id).html();
+    insertArticle(html_content);
+
     showArticleButtons(current_profile,false);
 
     // hide previous suggestion popup
@@ -437,7 +468,7 @@ function showDraft(draft){
     // hide all tools popups
     $(".discussions .discussion-popup").hide();
 
-    //
+    // update code editor in case it is open
 
 
     // TODO: weird..... use clone(true,true) instead...
@@ -503,6 +534,11 @@ function showPublication(publication){
     $(".articlecontent").attr("id",publication.id);
     $(".articlecontent").html(publication.content);
 
+    //??
+    $(".articlecontent").attr("backcolor",publication.background_color);
+    $(".articlecontent").attr("color",publication.color);
+    $(".articlecontent").attr("version",publication.version);
+
     applyBackgroundColorToArticle(publication.background_color);
     applyFontColorToArticle(publication.color);
 
@@ -512,6 +548,7 @@ function showPublication(publication){
     
 
     // we update the multi-window editor in case it has been already opened
+    console.log("---------> updating html content");
     var html_content = $(".articles #"+current_article_id).html();
     insertArticle(html_content);
 
@@ -588,6 +625,8 @@ function applyBackgroundColorToArticle(color){
     $(".articles").css("background-color",color);
     $(".articlecontent").css("background-color",color);
     $(".articlecontent").attr("backcolor",color);
+    // ???
+    //$("body").css("background-color",color);
 }
 
 function applyFontColorToArticle(color){
