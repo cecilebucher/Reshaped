@@ -1,4 +1,14 @@
 module.exports = {
+    content_draft: function () {
+        return "<div><h1>UN TITRE</h1></div>" 
+                + "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut \n"
+                + "labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et \n"
+                + "ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor\n"
+                + " sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna \n"
+                + "aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd \n"
+                + "gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>" ;
+
+    },
     content_1: function () {
         return "<div class='container' ><div class='item-1-1'><h1>Design and Science of the Holobiont</h1></div>" 
         + "<div class='item-2-1'><p class='text'>In 1991, after a lifetime of biological research, the scientist Lynn Margulis published Symbiosis as a Source of Evolutionary Innovation . Much of Margulis’ work focused on the principle of symbiosis, which she proposed emerges when individuals from one species engage with individuals from another species, over a sufficient period of time. Rather than centering biology around the premise of individual organisms, her work focused on their interaction in emergent, mutualistic systems.</p>"

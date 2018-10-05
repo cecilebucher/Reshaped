@@ -95,7 +95,7 @@ var publications = [
 ];
 
 var article_id_name = "article";
-var article_id_counter = 3;
+var article_id_counter = 4;
 
 var libraries = [
     {
@@ -199,7 +199,20 @@ var bookmarks = [
 
 //var id_draft = 0;
 var drafts = [
-
+    {
+        id: "article3",
+        filename: 'Example',
+        author: 'Paul Browdy',
+        content: db_files.content_draft(),
+        image: 'imgs/article/img_3.jpg',
+        portrait: "imgs/portraits/3.png",
+        rights: ["author"],
+        email: "info@browdy.com",
+        version: "1.0",
+        date: "05.10.2018",
+        background_color: "#FFFFFF",
+        color: "#000000",
+    },
 ]
 
 function getPublicationWithID(id) {
