@@ -1,12 +1,12 @@
 module.exports = {
     content_draft: function () {
-        return "<div><h1>UN TITRE</h1></div>" 
+        return "<div class='testExample'><h1>UN TITRE</h1>" 
                 + "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut \n"
                 + "labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et \n"
                 + "ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor\n"
                 + " sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna \n"
                 + "aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd \n"
-                + "gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>" ;
+                + "gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p></div>" ;
 
     },
     content_1: function () {

@@ -235,6 +235,11 @@ body {
     font-weight: bold;
 }
 
+.testExample {
+    width: 500px;
+    height: auto;
+}
+
 /* NOT WOKRING */
 /*
 .horizontal-navbar  a.dropbtnTest{
