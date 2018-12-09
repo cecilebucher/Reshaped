@@ -2,10 +2,6 @@
 
 var socket = io.connect('http://localhost:8080');
 
-// On demande le pseudo au visiteur...
-// var pseudo = prompt('Quel est votre pseudo ?');
-// Et on l'envoie avec le signal "petit_nouveau" (pour le différencier de "message")
-socket.emit('petit_nouveau', "cec");
 
 // On affiche une boîte de dialogue quand le serveur nous envoie un "message"
 socket.on('message', function(message) {
@@ -68,7 +64,6 @@ socket.on('newCode', function(code){
     showCode(code);
 });
 
-//socket.on('')
 
 socket.on('showdraft', function(draft) {
     showDraft(draft);

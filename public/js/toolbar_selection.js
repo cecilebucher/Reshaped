@@ -5,17 +5,6 @@ var selectedElement = null;
 
 var text_has_been_selected = false;
 
-function singleline() {
-    document.execCommand('formatblock', false, 'p');
-    var selectedNodes = [];
-    /*var sel = range.getSelection();
-    for (var i = 0; i < sel.rangeCount; i++) {
-        selectedNodes = selectedNodes.concat(sel.getRangeAt(i).getNodes());
-        $(selectedNodes).css("height", "20px");       
-    }*/
-    selectedElement = window.getSelection().focusNode.parentNode;
-    $(selectedElement).css("height", "20px");              
-}
 
 function nextNode(node) {
     if (node.hasChildNodes()) {
@@ -104,25 +93,8 @@ function removeSelectedElements(tagNames) {
 }
 
 function removeSelectedElementsFromNode(nodeName,tagNames) {
-    //var tagNamesArray = tagNames.toLowerCase().split(",");
-   // nodeName.forEach(function(node){
-    //var div = $("#article");
-    //var children = div.children();
-    console.log("!!!!!!!!!!!!!!!!!!! BEGIN");
-    /*
-    console.log(tagNames);
-    console.log("div",$("#article"));
-    var children = $("#article").children;
-    console.log("childnodes",children.length);
 
-    for(node in children){
-        console.log("node:",children[node]);
-    //}
-*/
-
-    //children.forEach(function(node){
-    //getSelectedNodes().forEach(function(node) {
-    console.log("AHAHHAHA",$(".articlecontent").find("span[id=articlespan0]"));
+    //console.log("AHAHHAHA",$(".articlecontent").find("span[id=articlespan0]"));
     $(".articlecontent").find("span[id=articlespan0]").each(function(node){
         if(node != undefined){
             console.log("not undefined", node.nodeType,node.nodeName);
@@ -134,7 +106,7 @@ function removeSelectedElementsFromNode(nodeName,tagNames) {
 
         }
     });
-    console.log("!!!!!!!!!!!!!!!!!!! END");
+    //console.log("!!!!!!!!!!!!!!!!!!! END");
 }
 
 
@@ -198,13 +170,10 @@ function wrapSelectedText() {
     if(window.getSelection().toString() != "" && window.getSelection().rangeCount > 0){
         var selection= window.getSelection().getRangeAt(0);
         var selectedText = selection.extractContents();
-        //console.log("selected text !!!!",selectedText);
         var span= document.createElement("span");
-    //  span.setAttribute('id','articlespan'+ span_counter);
         span.setAttribute('id','articlespan0');
         span_counter++;
         span.style.backgroundColor = "#00dd2e";
-        //span.style.backgroundColor = "#FF0000";
         span.appendChild(selectedText);
         selection.insertNode(span);
     }
@@ -317,68 +286,3 @@ $('.articles').dblclick(function() {
 
 
 
-function removeLink2(){
-
-    var selection = window.getSelection();
-    var text1 = selection.toString();
-    console.log("tt",selection.toString());
-
-    var elem = getSelectedNode();
-    console.log("elem",elem.toString());
-
-    var elem2 = getSelectionParentElement();
-    console.log("elem2",elem2);
-
-    var text2 = eval(elem2).textContent;
-    console.log("text2",text2);
-    if(text1 == text2){
-        console.log("we can check for whatever div");
-        document.execCommand("unlink",false,false);
-    }else{
-        console.log("we don't do anything");
-    }
-
-}
-
-
-function getNextNode(node)
-{
-    if (node.firstChild)
-        return node.firstChild;
-    while (node)
-    {
-        if (node.nextSibling)
-            return node.nextSibling;
-        node = node.parentNode;
-    }
-}
-
-function getNodesInRange(range)
-{
-    var start = range.startContainer;
-    var end = range.endContainer;
-    var commonAncestor = range.commonAncestorContainer;
-    var nodes = [];
-    var node;
-
-    // walk parent nodes from start to common ancestor
-    for (node = start.parentNode; node; node = node.parentNode)
-    {
-        nodes.push(node);
-        if (node == commonAncestor)
-            break;
-    }
-    nodes.reverse();
-
-    // walk children and siblings from start until end is found
-    for (node = start; node; node = getNextNode(node))
-    {
-        nodes.push(node);
-        if (node == end)
-            break;
-    }
-
-    console.log("nodes:",nodes);
-
-    return nodes;
-}
