@@ -1,6 +1,6 @@
 ## Installation
 
-* download node.js: https://nodejs.org/en/download/ and install it. The version that was used for the demo is node.js 10.5.0, but it should work with a more recent version of node.js.
+* download node.js: https://nodejs.org/en/download/ and install it. The version that was used for the demo is node.js 10.5.0, but it should work with a more recent version of node.js and it was tested on MacOS.
 
 * download the github project, by clicking on the green button "Clone or download" on top of this page. 
 
