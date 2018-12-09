@@ -8,9 +8,7 @@
 ## start the application
  
 * start the server:
-Open a terminal and go to the directory where you've donwloaded the github project.
-
-* and run:
+Open a terminal and go to the directory where you've donwloaded the github project and run:
 
 ``` 
 node app.js
