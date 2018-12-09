@@ -15,3 +15,12 @@ node app.js
 ``` 
 
 * open a browser and go to http://localhost:8080/. The version that was used for the demo was running on Chrome Version 67.0.3396.87.
+
+## Users
+
+No need for passwords. Here are the different usernames that were used so far.
+
+* spaulinet: reader rights
+* pbrowdy: reader and author rights
+* fkillouve: reader and publisher rights
+* dbihanic: reader and designer rights
